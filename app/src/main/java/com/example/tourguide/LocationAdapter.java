@@ -35,15 +35,20 @@ public class LocationAdapter extends ArrayAdapter<Location> {
         if(!location.hasImage()){
             locationImageView.setVisibility(View.GONE);
             //adjust parameters if there are no images
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-            int newLeftMarginInDP = 16;
-            int newLeftMarginInPX = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, newLeftMarginInDP, getContext().getResources().getDisplayMetrics());
-            params.setMargins(newLeftMarginInPX, newLeftMarginInPX,0,0);
+            adjustMargins(nameTextView);
         }else {
             locationImageView.setImageResource(location.getResInt());
         }
 
         return listItemView;
+    }
+
+    private void adjustMargins(TextView nameTextView) {
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        int newLeftMarginInDP = 16;
+        int newLeftMarginInPX = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, newLeftMarginInDP, getContext().getResources().getDisplayMetrics());
+        params.setMargins(newLeftMarginInPX, newLeftMarginInPX,0,0);
+        nameTextView.setLayoutParams(params);
     }
 
     public LocationAdapter(Context context, ArrayList<Location> locations) {
