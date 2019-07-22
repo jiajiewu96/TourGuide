@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class LocationAdapter extends ArrayAdapter<Location> {
+public class LocationListAdapter extends ArrayAdapter<Location> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View listItemView = convertView;
@@ -51,7 +51,7 @@ public class LocationAdapter extends ArrayAdapter<Location> {
         nameTextView.setLayoutParams(params);
     }
 
-    public LocationAdapter(Context context, ArrayList<Location> locations) {
+    public LocationListAdapter(Context context, ArrayList<Location> locations) {
         super(context, 0, locations);
     }
 }
