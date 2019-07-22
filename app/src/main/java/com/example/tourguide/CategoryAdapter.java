@@ -25,6 +25,8 @@ public class CategoryAdapter extends FragmentPagerAdapter {
                 return mContext.getString(R.string.category_food);
             case 2:
                 return mContext.getString(R.string.category_nature);
+            case 3:
+                return mContext.getString(R.string.category_events);
             default:
                 return mContext.getString(R.string.category_attractions);
         }
@@ -39,6 +41,8 @@ public class CategoryAdapter extends FragmentPagerAdapter {
                 return new FoodFragment();
             case 2:
                 return new NatureFragment();
+            case 3:
+                return new EventFragment();
             default:
                 return new AttractionsFragment();
         }
@@ -46,6 +50,6 @@ public class CategoryAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 3;
+        return 4;
     }
 }
