@@ -11,10 +11,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
 
 import java.util.ArrayList;
 
 public class LocationListAdapter extends ArrayAdapter<Location> {
+    private int mColor;
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View listItemView = convertView;
@@ -41,6 +43,8 @@ public class LocationListAdapter extends ArrayAdapter<Location> {
         } else {
             locationImageView.setImageResource(location.getResInt());
         }
+        int color = ContextCompat.getColor(getContext(), mColor);
+        listItemView.setBackgroundColor(color);
 
         return listItemView;
     }
@@ -54,7 +58,8 @@ public class LocationListAdapter extends ArrayAdapter<Location> {
         nameTextView.setLayoutParams(params);
     }
 
-    public LocationListAdapter(Context context, ArrayList<Location> locations) {
+    public LocationListAdapter(Context context, ArrayList<Location> locations, int colorResourceID) {
         super(context, 0, locations);
+        mColor = colorResourceID;
     }
 }

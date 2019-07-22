@@ -32,7 +32,7 @@ public class AttractionsFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_attractions, container, false);
         ArrayList<Location> attractions = ldm.getAttractions();
         ListView listView = rootView.findViewById(R.id.attractions_list_view);
-        LocationListAdapter locationAdapter = new LocationListAdapter(getActivity(), attractions);
+        LocationListAdapter locationAdapter = new LocationListAdapter(getActivity(), attractions, R.color.category_attractions);
         listView.setAdapter(locationAdapter);
         return rootView;
     }

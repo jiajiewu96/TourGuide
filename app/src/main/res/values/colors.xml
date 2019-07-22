@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#1e88e5</color>
+    <color name="colorPrimaryDark">#005cb2</color>
+    <color name="colorAccent">#f4511e</color>
+    <color name="category_attractions">#607d8b</color>
+    <color name="location_text_color">#e0e0e0</color>
 </resources>

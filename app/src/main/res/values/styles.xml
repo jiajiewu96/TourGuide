@@ -6,22 +6,31 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionBarStyle">@style/TourGuideAppBarStyle</item>
     </style>
     <!-- App bar style -->
-    <style name="MiwokAppBarStyle" parent="style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+    <style name="TourGuideAppBarStyle" parent="Widget.AppCompat.Light.ActionBar.Solid.Inverse">
         <!-- Remove the shadow below the app bar -->
         <item name="elevation">0dp</item>
     </style>
 
     <!-- Style for a tab that displays a category name -->
     <style name="CategoryTab" parent="Widget.Design.TabLayout">
-        <item name="tabIndicatorColor">@android:color/white</item>
-        <item name="tabSelectedTextColor">@android:color/white</item>
         <item name="tabTextAppearance">@style/CategoryTabTextAppearance</item>
+        <item name="android:background">@color/colorPrimary</item>
     </style>
 
     <!-- Text appearance style for a category tab -->
     <style name="CategoryTabTextAppearance" parent="TextAppearance.Design.Tab">
         <item name="android:textColor">#A8A19E</item>
+    </style>
+
+    <!--Text appearance for category items-->
+    <style name="LocationTextStyle">
+        <item name="android:textColor">@color/location_text_color</item>
+        <item name="android:fontFamily">@font/roboto_mono_bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">20sp</item>
+
     </style>
 </resources>
