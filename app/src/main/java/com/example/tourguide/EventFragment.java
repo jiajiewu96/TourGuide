@@ -53,6 +53,7 @@ public class EventFragment extends Fragment {
 
             }
         });
+        rootView.setBackgroundColor(getActivity().getResources().getColor(R.color.category_event_dark));
         return rootView;
     }
 

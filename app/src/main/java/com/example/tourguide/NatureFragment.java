@@ -53,6 +53,8 @@ public class NatureFragment extends Fragment {
 
             }
         });
+        rootView.setBackgroundColor(getActivity().getResources().getColor(R.color.category_nature_dark));
+
         return rootView;
     }
 

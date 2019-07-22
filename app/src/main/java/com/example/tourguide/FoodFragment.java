@@ -54,6 +54,8 @@ public class FoodFragment extends Fragment {
 
             }
         });
+        rootView.setBackgroundColor(getActivity().getResources().getColor(R.color.category_food_dark));
+
         return rootView;
     }
 

@@ -55,6 +55,8 @@ public class AttractionsFragment extends Fragment {
 
             }
         });
+        rootView.setBackgroundColor(getActivity().getResources().getColor(R.color.category_attractions_dark));
+
         return rootView;
     }
 
