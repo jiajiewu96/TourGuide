@@ -34,7 +34,17 @@ public class LocationDataManager {
     }
 
     private void createDummyNature() {
-
+        nature.add(new Location("Discovery Park", "This 534-acre city park in Magnolia feels like true wilderness," +
+                " with meadows, beaches, bluffs, mountain views, and tall trees. " +
+                "Stroll the nearly 12 miles of walking trails, or visit the West Point Lighthouse for a postcard-worthy photo op."));
+        nature.add(new Location("Mount Si", "One of the most popular hikes in the area," +
+                " Mount Si is a great place to gain some elevation—3,150 feet of it, to be exact. " +
+                "You’ll see plenty of people with loaded packs training for summits like Mount Rainier, " +
+                "but it’s just as enjoyable for casual day hikers traveling at a leisurely pace."));
+        nature.add(new Location("Mount Rainier", "Make a day trip to Mount Rainier, the icon looming on the horizon. " +
+                "It’s a 2.5-hour drive to the active volcano, with many tour operators offering guided tours. " +
+                "The Paradise visitor area is a great place to start, with trailheads that are both beginner-friendly and suited for expert climbers. " +
+                "Take in the alpine meadows abloom with wildflowers in the summer, or embark on a snowshoe excursion in winter."));
     }
 
     private void createDummyFood() {
