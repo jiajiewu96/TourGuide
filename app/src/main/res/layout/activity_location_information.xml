@@ -18,19 +18,19 @@
         android:id="@+id/location_information_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/LocationInformationStyle"
+        style="@style/LocationInformationStyle.LocationName"
         android:text="TextView" />
 
     <TextView
         android:id="@+id/location_information_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/LocationInformationStyle"
+        style="@style/LocationInformationStyle.LocationInformation"
         android:text="TextView" />
 
     <TextView
         android:id="@+id/locaiton_information_description"
-        style="@style/LocationInformationStyle"
+        style="@style/LocationInformationStyle.LocationInformation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView" />
