@@ -55,6 +55,7 @@ public class LocationListAdapter extends ArrayAdapter<Location> {
         int newMarginInPX = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, newMarginInDP, getContext().getResources().getDisplayMetrics());
         params.topMargin = newMarginInPX;
         params.leftMargin = newMarginInPX;
+        params.rightMargin = newMarginInPX;
         nameTextView.setLayoutParams(params);
     }
 
