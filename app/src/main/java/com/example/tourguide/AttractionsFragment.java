@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 
 /**
@@ -25,7 +26,11 @@ public class AttractionsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_attractions, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_attractions, container, false);
+
+        ListView listView = rootView.findViewById(R.id.attractions_list_view);
+
+        return rootView;
     }
 
 }
