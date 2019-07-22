@@ -9,4 +9,5 @@
     <color name="category_event">#002244</color>
     <color name="location_text_color">#e0e0e0</color>
     <color name="date_color">#aeaeae</color>
+    <color name="location_information_text_color">#373737</color>
 </resources>
