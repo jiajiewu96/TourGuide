@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class LocationInformationActivity extends AppCompatActivity {
@@ -25,8 +26,18 @@ public class LocationInformationActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
 
         getLocationInfoFromBundle(extras);
-
+        setupBackground(extras);
         setupLocationInfo();
+    }
+
+    private void setupBackground(Bundle extras) {
+        LinearLayout layout = (LinearLayout) findViewById(R.id.location_information_layout);
+        int backgroundColorID = getResources().getColor(R.color.design_default_color_primary_dark);
+        if(extras!=null){
+             backgroundColorID = extras.getInt("loc_bg_color");
+        }
+
+        layout.setBackgroundColor(backgroundColorID);
     }
 
     private void setupLocationInfo() {

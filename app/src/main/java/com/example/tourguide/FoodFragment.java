@@ -43,12 +43,14 @@ public class FoodFragment extends Fragment {
                 String locationDescription = location.getDescription();
                 int locationResInt = location.getResInt();
                 String locationDate = location.getDate();
+                int backgroundColorResID = getActivity().getResources().getColor(R.color.category_food_dark);
 
                 Intent intent = new Intent(getActivity(), LocationInformationActivity.class);
                 intent.putExtra("loc_name", locationName);
                 intent.putExtra("loc_desc", locationDescription);
                 intent.putExtra("loc_res_int", locationResInt);
                 intent.putExtra("loc_date", locationDate);
+                intent.putExtra("loc_bg_color", backgroundColorResID);
 
                 startActivity(intent);
 

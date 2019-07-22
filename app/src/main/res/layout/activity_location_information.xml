@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/location_information_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -16,16 +17,16 @@
 
     <TextView
         android:id="@+id/location_information_name"
+        style="@style/LocationInformationStyle.LocationName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/LocationInformationStyle.LocationName"
         android:text="TextView" />
 
     <TextView
         android:id="@+id/location_information_date"
+        style="@style/LocationInformationStyle.LocationInformation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/LocationInformationStyle.LocationInformation"
         android:text="TextView" />
 
     <TextView
