@@ -48,7 +48,15 @@ public class LocationDataManager {
     }
 
     private void createDummyFood() {
-
+        food.add(new Location("Starbucks Reserve Roastery & Tasting Room", "Dubbed the “Willy Wonka factory of coffee,” " +
+                "all of the rare, small-lot Starbucks Reserve coffees are roasted and packaged here before being shipped all over the world. " +
+                "Speak with a Starbucks master roaster while watching coffees roast, enjoy a unique food and beverage menu, " +
+                "and shop one-of-a-kind merchandise at the only Starbucks Roastery and Tasting Room in the world. " +
+                "Located just nine blocks from the original Pike Place Market store, open daily 6:30am – 11pm."));
+        food.add(new Location("Japonessa", "Housing the latest talents of renowned Chef Billy Beach, " +
+                "Japonessa offers some of the best sushi Seattle has to offer. "));
+        food.add(new Location("Aqua By El Guacho", "Savory seafood, sinful desserts, stunning dining room, 4,000 sq. ft. deck. " +
+                "Open for dinner. Nightly piano music. Private dining rooms available."));
     }
 
     private void createDummyAttractions() {
