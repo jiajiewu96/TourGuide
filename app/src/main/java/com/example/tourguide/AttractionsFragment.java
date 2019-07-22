@@ -16,6 +16,7 @@ import android.widget.ListView;
  */
 public class AttractionsFragment extends Fragment {
 
+    private LocationDataManager ldm = LocationDataManager.getInstance();
 
     public AttractionsFragment() {
         // Required empty public constructor

@@ -25,6 +25,19 @@ public class LocationDataManager {
         createDummyEvents();
     }
 
+    public ArrayList<Location> getAttractions(){
+        return attractions;
+    }
+    public ArrayList<Location> getFood(){
+        return food;
+    }
+    public ArrayList<Location> getNature(){
+        return nature;
+    }
+    public ArrayList<Location> getEvents(){
+        return events;
+    }
+
     private void createDummyEvents() {
         events.add(new Location("Seattle Seahawks vs. Denver Broncos", "NFL Football: Seattle Seahawks and Denver Broncos match off at CenturyLink Field.", "8/8/2019"));
         events.add(new Location("Seattle Mariners vs. Detroit Tigers", "Don’t miss the battle between Seattle Mariners and Detroit Tigers at Safeco Field.", "7/25/2019 through 7/28/2019"));
