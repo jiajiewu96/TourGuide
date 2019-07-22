@@ -18,10 +18,10 @@ import java.util.ArrayList;
  */
 public class AttractionsFragment extends Fragment {
 
-    private LocationDataManager ldm = LocationDataManager.getInstance();
+    private LocationDataManager ldm;
 
     public AttractionsFragment() {
-        // Required empty public constructor
+        ldm = LocationDataManager.getInstance();
     }
 
 

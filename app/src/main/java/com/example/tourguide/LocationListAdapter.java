@@ -10,13 +10,15 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
+
 import java.util.ArrayList;
 
 public class LocationListAdapter extends ArrayAdapter<Location> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View listItemView = convertView;
-        if(listItemView == null){
+        if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.location_list_item, parent, false);
         }
 
@@ -27,16 +29,16 @@ public class LocationListAdapter extends ArrayAdapter<Location> {
         ImageView locationImageView = (ImageView) listItemView.findViewById(R.id.location_thumbnail);
 
         nameTextView.setText(location.getName());
-        if(!location.hasDate()){
+        if (!location.hasDate()) {
             dateTextView.setVisibility(View.GONE);
-        }else{
+        } else {
             dateTextView.setText(location.getDate());
         }
-        if(!location.hasImage()){
+        if (!location.hasImage()) {
             locationImageView.setVisibility(View.GONE);
             //adjust parameters if there are no images
             adjustMargins(nameTextView);
-        }else {
+        } else {
             locationImageView.setImageResource(location.getResInt());
         }
 
@@ -44,10 +46,11 @@ public class LocationListAdapter extends ArrayAdapter<Location> {
     }
 
     private void adjustMargins(TextView nameTextView) {
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        int newLeftMarginInDP = 16;
-        int newLeftMarginInPX = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, newLeftMarginInDP, getContext().getResources().getDisplayMetrics());
-        params.setMargins(newLeftMarginInPX, newLeftMarginInPX,0,0);
+        ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) nameTextView.getLayoutParams();
+        int newMarginInDP = 16;
+        int newMarginInPX = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, newMarginInDP, getContext().getResources().getDisplayMetrics());
+        params.topMargin = newMarginInPX;
+        params.leftMargin = newMarginInPX;
         nameTextView.setLayoutParams(params);
     }
 
